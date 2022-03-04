@@ -4,4 +4,4 @@ The aim of the ontology is to represent knowledge related to drones' semantic tr
 Ontology IRI: http://i-lab.aegean.gr/kotis/ontologies/onto4drone
 Ontology proposed prefix: dront
 
-OWL file: https://i-lab.aegean.gr/kotis/Ontologies/Onto4drone/Onto4drone-v05.owl
+OWL file: https://i-lab.aegean.gr/kotis/Ontologies/Onto4drone/Onto4drone.owl
