@@ -16,7 +16,7 @@ OWL file: https://i-lab.aegean.gr/kotis/Ontologies/Onto4drone/Onto4drone.owl
 ---
 ### Concept Map
 
-![Concept Map](images/Basic concepts and relations of STaKG model.png)
+![Concept Map](images/Basic_concepts_and_relations_of_STaKG_model.png)
 
 *<b>Figure 2.</b> Basic concepts and relations of the semantic model representing drones and recording episodes*
 
@@ -27,7 +27,7 @@ OWL file: https://i-lab.aegean.gr/kotis/Ontologies/Onto4drone/Onto4drone.owl
 
 *<b>Figure 3.</b> The object properties, individuals, restrictions, and annotations of the class UAV Drone of the Onto4drone ontology (version 1.0.0)*
 
-![Recording event class](images/Recording Event.png)
+![Recording event class](images/RecordingEvent.png)
 
 *<b>Figure 4.</b> The object properties, individuals, restrictions, and annotations of the class Recording Event of the Onto4drone ontology (version 1.0.0).*
 
@@ -55,7 +55,7 @@ SELECT * WHERE {
 }
 ```
 
-![example sparql query 1](images/SPARQL query1.png)
+![example sparql query 1](images/SPARQL_query1.png)
 
 *<b>Figure 6.</b> Example query “which flights of mission1 resulted in records that include a specific object of interest, namely, a petrified trunk”*
 
@@ -82,7 +82,7 @@ SELECT ?position ?weather ?temprature WHERE {
 }
 ```
 
-![example sparql query 2](images/sparql query 2.png)
+![example sparql query 2](images/SPARQL_query2.png)
 
 *<b>Figure 7.</b> Example query “what are the weather conditions and temperature at the recording points while recording a specific object of interest, namely, a petrified trunk”*
 
