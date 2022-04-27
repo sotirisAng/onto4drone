@@ -1,17 +1,23 @@
 # onto4drone
+
 The aim of the ontology is to represent knowledge related to drones' semantic trajectories (flights, missions, recordings). Reuses datAcron ontology (http://ai-group.ds.unipi.gr/datacron_ontology/).
 
 Ontology IRI: http://i-lab.aegean.gr/kotis/Ontologies/Onto4drone
+
 Ontology proposed prefix: dront
 
 OWL file: https://i-lab.aegean.gr/kotis/Ontologies/Onto4drone/Onto4drone.owl
 
 ---
 ![example KG](images/exapmle-graph.png)
+
 *<b>Figure 1.</b> Example KG representing knowledge related to a drone trajectory followed during a documentation mission in the GeoPark of Lesvos island*
+
 ---
 ### Concept Map
+
 ![Concept Map](images/Basic concepts and relations of STaKG model.png)
+
 *<b>Figure 2.</b> Basic concepts and relations of the semantic model representing drones and recording episodes*
 
 ---
@@ -50,8 +56,11 @@ SELECT * WHERE {
 ```
 
 ![example sparql query 1](images/SPARQL query1.png)
+
 *<b>Figure 6.</b> Example query “which flights of mission1 resulted in records that include a specific object of interest, namely, a petrified trunk”*
+
 ---
+
 What are the weather conditions and temperature at the recorded points when recording the object of interest, pertified trunk
 
 
@@ -74,6 +83,8 @@ SELECT ?position ?weather ?temprature WHERE {
 ```
 
 ![example sparql query 2](images/sparql query 2.png)
+
 *<b>Figure 7.</b> Example query “what are the weather conditions and temperature at the recording points while recording a specific object of interest, namely, a petrified trunk”*
+
 ---
 
