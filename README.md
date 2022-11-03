@@ -6,7 +6,7 @@ Ontology IRI: http://i-lab.aegean.gr/kotis/Ontologies/Onto4drone
 
 Ontology proposed prefix: dront
 
-OWL file: https://i-lab.aegean.gr/kotis/Ontologies/Onto4drone/Onto4drone.owl
+OWL file: https://i-lab.aegean.gr/kotis/Ontologies/Onto4drone/Onto4drone.owl 
 Latest OWL file: https://i-lab.aegean.gr/kotis/Ontologies/Onto4drone/Onto4drone_v1.0.2.owl
 
 ---
