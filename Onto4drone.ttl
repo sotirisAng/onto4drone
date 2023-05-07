@@ -1,4 +1,4 @@
-@prefix : <http://i-lab.aegean.gr/kotis/ontologies/onto4drone> .
+@prefix : <http://anonymous/ontologies/onto4drone> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix DUL: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -13,16 +13,12 @@
 @prefix terms: <http://purl.org/dc/terms/> .
 @prefix schema: <http://schema.org/> .
 @prefix datAcron: <http://www.datacron-project.eu/datAcron#> .
-@prefix onto4drone: <http://i-lab.aegean.gr/kotis/ontologies/onto4drone#> .
-@base <http://i-lab.aegean.gr/kotis/ontologies/onto4drone> .
+@prefix onto4drone: <http://anonymous/ontologies/onto4drone#> .
+@base <http://anonymous/ontologies/onto4drone> .
 
-<http://i-lab.aegean.gr/kotis/ontologies/onto4drone> rdf:type owl:Ontology ;
-                                                      owl:versionIRI <http://i-lab.aegean.gr/kotis/ontologies/onto4drone/1.0.0> ;
+<http://anonymous/ontologies/onto4drone> rdf:type owl:Ontology ;
+                                                      owl:versionIRI <http://anonymous/ontologies/onto4drone/1.0.0> ;
                                                       owl:imports datAcron: ;
-                                                      dc:contributor "A. Soularidis, i-Lab, University of the Aegean" ,
-                                                                     "E. Moraitou, i-Lab, University of the Aegean" ,
-                                                                     "K. Kotis, i-Lab, University of the Aegean" ,
-                                                                     "S. Angelis, i-Lab, University of the Aegean" ;
                                                       vann:preferredNamespacePrefix "dront"@en ;
                                                       rdfs:comment "The aim of the ontology is to represent the knowledge related to drones' semantic trajectories (flights, missions, recordings). Reuses datAcron ontology."@en ;
                                                       rdfs:label "onto4drone"@en ;
@@ -32,7 +28,7 @@
 #    Annotation properties
 #################################################################
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#hasPartDrone
+###  http://anonymous/ontologies/onto4drone#hasPartDrone
 onto4drone:hasPartDrone rdf:type owl:AnnotationProperty .
 
 
@@ -68,7 +64,7 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#carriesEquipment
+###  http://anonymous/ontologies/onto4drone#carriesEquipment
 onto4drone:carriesEquipment rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf owl:topObjectProperty ;
                             rdfs:domain onto4drone:Drone ;
@@ -77,7 +73,7 @@ onto4drone:carriesEquipment rdf:type owl:ObjectProperty ;
                             rdfs:label "carries equipment"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#encloses
+###  http://anonymous/ontologies/onto4drone#encloses
 onto4drone:encloses rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf datAcron:hasPart ;
                     rdf:type owl:InverseFunctionalProperty ;
@@ -87,13 +83,13 @@ onto4drone:encloses rdf:type owl:ObjectProperty ;
                     rdfs:label "encloses"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#hasDroneParticipant
+###  http://anonymous/ontologies/onto4drone#hasDroneParticipant
 onto4drone:hasDroneParticipant rdf:type owl:ObjectProperty ;
                                rdfs:subPropertyOf DUL:hasParticipant ;
                                owl:inverseOf onto4drone:isDroneParticipantIn ;
                                rdfs:domain [ rdf:type owl:Class ;
                                              owl:unionOf ( onto4drone:RecordingEvent
-                                                           <http://i-lab.aegean.gr/kotis/ontologies/onto4drone/MilitaryEvent>
+                                                           <http://anonymous/ontologies/onto4drone/MilitaryEvent>
                                                          )
                                            ] ;
                                rdfs:range onto4drone:Drone ;
@@ -101,7 +97,7 @@ onto4drone:hasDroneParticipant rdf:type owl:ObjectProperty ;
                                rdfs:label "has drone participant"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#hasFlight
+###  http://anonymous/ontologies/onto4drone#hasFlight
 onto4drone:hasFlight rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf DUL:isParticipantIn ;
                      rdfs:domain onto4drone:UAVDrone ;
@@ -109,7 +105,7 @@ onto4drone:hasFlight rdf:type owl:ObjectProperty ;
                      rdfs:label "has flight"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#hasTrajectory
+###  http://anonymous/ontologies/onto4drone#hasTrajectory
 onto4drone:hasTrajectory rdf:type owl:ObjectProperty ;
                          owl:inverseOf onto4drone:trajectoryRefersTo ;
                          rdf:type owl:InverseFunctionalProperty ;
@@ -119,7 +115,7 @@ onto4drone:hasTrajectory rdf:type owl:ObjectProperty ;
                          rdfs:label "has trajectory"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#includesFlight
+###  http://anonymous/ontologies/onto4drone#includesFlight
 onto4drone:includesFlight rdf:type owl:ObjectProperty ;
                           rdfs:subPropertyOf DUL:hasConstituent ;
                           rdf:type owl:InverseFunctionalProperty ;
@@ -129,28 +125,28 @@ onto4drone:includesFlight rdf:type owl:ObjectProperty ;
                           rdfs:label "includes flight"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#isDroneParticipantIn
+###  http://anonymous/ontologies/onto4drone#isDroneParticipantIn
 onto4drone:isDroneParticipantIn rdf:type owl:ObjectProperty ;
                                 rdfs:subPropertyOf DUL:isParticipantIn ;
                                 rdfs:domain onto4drone:Drone ;
                                 rdfs:range [ rdf:type owl:Class ;
                                              owl:unionOf ( onto4drone:RecordingEvent
-                                                           <http://i-lab.aegean.gr/kotis/ontologies/onto4drone/MilitaryEvent>
+                                                           <http://anonymous/ontologies/onto4drone/MilitaryEvent>
                                                          )
                                            ] ;
                                 rdfs:label "is drone participant in"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#isPartOfSwarm
+###  http://anonymous/ontologies/onto4drone#isPartOfSwarm
 onto4drone:isPartOfSwarm rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf DUL:isPartOf ;
-                         owl:inverseOf <http://i-lab.aegean.gr/kotis/ontologies/onto4drone/hasPartDrone> ;
+                         owl:inverseOf <http://anonymous/ontologies/onto4drone/hasPartDrone> ;
                          rdfs:domain onto4drone:Drone ;
                          rdfs:range onto4drone:SwarmOfDrones ;
                          rdfs:label "is part of swarm"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#isRecordedIn
+###  http://anonymous/ontologies/onto4drone#isRecordedIn
 onto4drone:isRecordedIn rdf:type owl:ObjectProperty ;
                         rdfs:domain onto4drone:EntityOfInterest ;
                         rdfs:range onto4drone:Record ;
@@ -158,7 +154,7 @@ onto4drone:isRecordedIn rdf:type owl:ObjectProperty ;
                         rdfs:label "is recorded in"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#produces
+###  http://anonymous/ontologies/onto4drone#produces
 onto4drone:produces rdf:type owl:ObjectProperty ,
                              owl:InverseFunctionalProperty ;
                     rdfs:domain onto4drone:RecordingEvent ;
@@ -167,7 +163,7 @@ onto4drone:produces rdf:type owl:ObjectProperty ,
                     rdfs:label "produces"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#records
+###  http://anonymous/ontologies/onto4drone#records
 onto4drone:records rdf:type owl:ObjectProperty ;
                    rdfs:domain onto4drone:RecordingEvent ;
                    rdfs:range onto4drone:EntityOfInterest ;
@@ -175,7 +171,7 @@ onto4drone:records rdf:type owl:ObjectProperty ;
                    rdfs:label "records"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#trajectoryRefersTo
+###  http://anonymous/ontologies/onto4drone#trajectoryRefersTo
 onto4drone:trajectoryRefersTo rdf:type owl:ObjectProperty ,
                                        owl:FunctionalProperty ;
                               rdfs:domain datAcron:Trajectory ;
@@ -184,8 +180,8 @@ onto4drone:trajectoryRefersTo rdf:type owl:ObjectProperty ,
                               rdfs:label "trajectory refers to"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone/hasPartDrone
-<http://i-lab.aegean.gr/kotis/ontologies/onto4drone/hasPartDrone> rdf:type owl:ObjectProperty ;
+###  http://anonymous/ontologies/onto4drone/hasPartDrone
+<http://anonymous/ontologies/onto4drone/hasPartDrone> rdf:type owl:ObjectProperty ;
                                                                   rdfs:subPropertyOf DUL:hasPart ;
                                                                   rdfs:domain onto4drone:SwarmOfDrones ;
                                                                   rdfs:range onto4drone:Drone ;
@@ -282,28 +278,28 @@ DUL:overlaps rdf:type owl:ObjectProperty .
 #    Data properties
 #################################################################
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#hasTime
+###  http://anonymous/ontologies/onto4drone#hasTime
 onto4drone:hasTime rdf:type owl:DatatypeProperty ;
                    rdfs:domain datAcron:Time ;
                    rdfs:range xsd:dateTime ;
                    rdfs:label "has time"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#hasVelocity
+###  http://anonymous/ontologies/onto4drone#hasVelocity
 onto4drone:hasVelocity rdf:type owl:DatatypeProperty ;
                        rdfs:domain datAcron:Geometry ;
                        rdfs:range xsd:string ;
                        rdfs:label "has velocity"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#isActivated
+###  http://anonymous/ontologies/onto4drone#isActivated
 onto4drone:isActivated rdf:type owl:DatatypeProperty ;
                        rdfs:domain onto4drone:Drone ;
                        rdfs:range xsd:boolean ;
                        rdfs:label "is activated"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#isPaused
+###  http://anonymous/ontologies/onto4drone#isPaused
 onto4drone:isPaused rdf:type owl:DatatypeProperty ;
                     rdfs:domain onto4drone:Drone ;
                     rdfs:range xsd:boolean ;
@@ -345,14 +341,14 @@ DUL:hasIntervalDate rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#ConstantRecordingPosition
+###  http://anonymous/ontologies/onto4drone#ConstantRecordingPosition
 onto4drone:ConstantRecordingPosition rdf:type owl:Class ;
                                      rdfs:subClassOf onto4drone:RecordingPosition ;
                                      rdfs:comment "The spatiotemporal position on which recording -constantly- occurs."@en ;
                                      rdfs:label "Constant Recording Position"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#Drone
+###  http://anonymous/ontologies/onto4drone#Drone
 onto4drone:Drone rdf:type owl:Class ;
                  rdfs:subClassOf datAcron:MovingObject ,
                                  DUL:PhysicalObject ;
@@ -360,80 +356,80 @@ onto4drone:Drone rdf:type owl:Class ;
                  rdfs:label "Drone" .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#DroneCarryingEquipment
+###  http://anonymous/ontologies/onto4drone#DroneCarryingEquipment
 onto4drone:DroneCarryingEquipment rdf:type owl:Class ;
                                   rdfs:subClassOf DUL:PhysicalObject ;
                                   rdfs:comment "The equipment carried by the drone for different purposes."@en ;
                                   rdfs:label "Drone Carrying Equipment"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#DroneLaserScanner
+###  http://anonymous/ontologies/onto4drone#DroneLaserScanner
 onto4drone:DroneLaserScanner rdf:type owl:Class ;
                              rdfs:subClassOf onto4drone:DroneRecordingEquipment ;
                              rdfs:comment "The device used for laser scanning."@en ;
                              rdfs:label "Drone Laser Scanner"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#DroneMillitaryEquipment
+###  http://anonymous/ontologies/onto4drone#DroneMillitaryEquipment
 onto4drone:DroneMillitaryEquipment rdf:type owl:Class ;
                                    rdfs:subClassOf onto4drone:DroneCarryingEquipment ;
                                    rdfs:comment "The equipment used for military purposes, carried by the drone"@en ;
                                    rdfs:label "Drone Military Equipment"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#DronePhotographicCamera
+###  http://anonymous/ontologies/onto4drone#DronePhotographicCamera
 onto4drone:DronePhotographicCamera rdf:type owl:Class ;
                                    rdfs:subClassOf onto4drone:DroneRecordingEquipment ;
                                    rdfs:comment "The device used for photography."@en ;
                                    rdfs:label "Drone Photographic Camera"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#DroneRecordingEquipment
+###  http://anonymous/ontologies/onto4drone#DroneRecordingEquipment
 onto4drone:DroneRecordingEquipment rdf:type owl:Class ;
                                    rdfs:subClassOf onto4drone:DroneCarryingEquipment ;
                                    rdfs:comment "The devices used for the recording, and carried by the drone."@en ;
                                    rdfs:label "Drone Recording Equipment"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#DroneVideoCamera
+###  http://anonymous/ontologies/onto4drone#DroneVideoCamera
 onto4drone:DroneVideoCamera rdf:type owl:Class ;
                             rdfs:subClassOf onto4drone:DroneRecordingEquipment ;
                             rdfs:comment "The device used for video recording."@en ;
                             rdfs:label "Drone Video Camera"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#EntityOfInterest
+###  http://anonymous/ontologies/onto4drone#EntityOfInterest
 onto4drone:EntityOfInterest rdf:type owl:Class ;
                             rdfs:comment "The entity of interest of any kind (object, event, living organism), that the recording activity aims to record."@en ;
                             rdfs:label "Entity of Interest"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#EventOfInterest
+###  http://anonymous/ontologies/onto4drone#EventOfInterest
 onto4drone:EventOfInterest rdf:type owl:Class ;
                            rdfs:subClassOf onto4drone:EntityOfInterest ;
                            rdfs:comment "The specific event that the recording activity aims to record."@en ;
                            rdfs:label "Event of Interest"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#FlyingObject
+###  http://anonymous/ontologies/onto4drone#FlyingObject
 onto4drone:FlyingObject rdf:type owl:Class ;
                         rdfs:subClassOf datAcron:MovingObject .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#Gun
+###  http://anonymous/ontologies/onto4drone#Gun
 onto4drone:Gun rdf:type owl:Class ;
                rdfs:subClassOf onto4drone:DroneMillitaryEquipment ;
                rdfs:label "Gun"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#GunShootingEvent
+###  http://anonymous/ontologies/onto4drone#GunShootingEvent
 onto4drone:GunShootingEvent rdf:type owl:Class ;
-                            rdfs:subClassOf <http://i-lab.aegean.gr/kotis/ontologies/onto4drone/MilitaryEvent> ;
+                            rdfs:subClassOf <http://anonymous/ontologies/onto4drone/MilitaryEvent> ;
                             rdfs:comment "To model military-related events (of drones carrying guns)"@en ;
                             rdfs:label "GunShooting"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#LaserScanningEvent
+###  http://anonymous/ontologies/onto4drone#LaserScanningEvent
 onto4drone:LaserScanningEvent rdf:type owl:Class ;
                               rdfs:subClassOf onto4drone:RecordingEvent ,
                                               [ rdf:type owl:Restriction ;
@@ -455,12 +451,12 @@ onto4drone:LaserScanningEvent rdf:type owl:Class ;
                               rdfs:label "Laser Scanning Event"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#MarineObject
+###  http://anonymous/ontologies/onto4drone#MarineObject
 onto4drone:MarineObject rdf:type owl:Class ;
                         rdfs:subClassOf datAcron:MovingObject .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#Mission
+###  http://anonymous/ontologies/onto4drone#Mission
 onto4drone:Mission rdf:type owl:Class ;
                    rdfs:subClassOf datAcron:Event ,
                                    [ rdf:type owl:Restriction ;
@@ -472,21 +468,21 @@ onto4drone:Mission rdf:type owl:Class ;
                    rdfs:label "Mission"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#ObjectOfInterest
+###  http://anonymous/ontologies/onto4drone#ObjectOfInterest
 onto4drone:ObjectOfInterest rdf:type owl:Class ;
                             rdfs:subClassOf onto4drone:EntityOfInterest ;
                             rdfs:comment "The specific physical object that the recording activity aims to record."@en ;
                             rdfs:label "Object of Interest"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#PanoramicPhotograph
+###  http://anonymous/ontologies/onto4drone#PanoramicPhotograph
 onto4drone:PanoramicPhotograph rdf:type owl:Class ;
                                rdfs:subClassOf onto4drone:Photograph ;
                                rdfs:comment "A photograph that captures horizontally elongated fields of view."@en ;
                                rdfs:label "Panoramic Photograph"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#PanoramicShootingEvent
+###  http://anonymous/ontologies/onto4drone#PanoramicShootingEvent
 onto4drone:PanoramicShootingEvent rdf:type owl:Class ;
                                   rdfs:subClassOf onto4drone:PhotoShootingEvent ,
                                                   [ rdf:type owl:Restriction ;
@@ -497,7 +493,7 @@ onto4drone:PanoramicShootingEvent rdf:type owl:Class ;
                                   rdfs:label "Panoramic Shooting Event"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#PhotoShootingEvent
+###  http://anonymous/ontologies/onto4drone#PhotoShootingEvent
 onto4drone:PhotoShootingEvent rdf:type owl:Class ;
                               rdfs:subClassOf onto4drone:RecordingEvent ,
                                               [ rdf:type owl:Restriction ;
@@ -519,28 +515,28 @@ onto4drone:PhotoShootingEvent rdf:type owl:Class ;
                               rdfs:label "Photo Shooting Event"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#Photograph
+###  http://anonymous/ontologies/onto4drone#Photograph
 onto4drone:Photograph rdf:type owl:Class ;
                       rdfs:subClassOf onto4drone:Record ;
                       rdfs:comment "A picture made using a photographic camera."@en ;
                       rdfs:label "Photograph"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#PointCloud
+###  http://anonymous/ontologies/onto4drone#PointCloud
 onto4drone:PointCloud rdf:type owl:Class ;
                       rdfs:subClassOf onto4drone:Record ;
                       rdfs:comment "A set of data points in space which represent a 3D shape or object captured by a laser scanner."@en ;
                       rdfs:label "Point Cloud"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#PointOfInterest
+###  http://anonymous/ontologies/onto4drone#PointOfInterest
 onto4drone:PointOfInterest rdf:type owl:Class ;
                            rdfs:subClassOf onto4drone:EntityOfInterest ;
                            rdfs:comment "The specific spatial point that the recording activity aims to record."@en ;
                            rdfs:label "Point of Interest"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#ProcessedRecord
+###  http://anonymous/ontologies/onto4drone#ProcessedRecord
 onto4drone:ProcessedRecord rdf:type owl:Class ;
                            rdfs:subClassOf datAcron:Document ,
                                            [ rdf:type owl:Restriction ;
@@ -552,14 +548,14 @@ onto4drone:ProcessedRecord rdf:type owl:Class ;
                            rdfs:label "Processed Record"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#Record
+###  http://anonymous/ontologies/onto4drone#Record
 onto4drone:Record rdf:type owl:Class ;
                   rdfs:subClassOf datAcron:Document ;
                   rdfs:comment "The result of the recording process."@en ;
                   rdfs:label "Record"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#RecordingEvent
+###  http://anonymous/ontologies/onto4drone#RecordingEvent
 onto4drone:RecordingEvent rdf:type owl:Class ;
                           rdfs:subClassOf datAcron:Event ,
                                           [ rdf:type owl:Restriction ;
@@ -584,14 +580,14 @@ onto4drone:RecordingEvent rdf:type owl:Class ;
                           rdfs:label "Recording Event"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#RecordingPosition
+###  http://anonymous/ontologies/onto4drone#RecordingPosition
 onto4drone:RecordingPosition rdf:type owl:Class ;
                              rdfs:subClassOf datAcron:TrajectoryPart ;
                              rdfs:comment "The spatiotemporal position on which recording -instantly- occurs."@en ;
                              rdfs:label "Recording Position"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#RecordingSegment
+###  http://anonymous/ontologies/onto4drone#RecordingSegment
 onto4drone:RecordingSegment rdf:type owl:Class ;
                             rdfs:subClassOf datAcron:Segment ,
                                             [ rdf:type owl:Restriction ;
@@ -602,25 +598,25 @@ onto4drone:RecordingSegment rdf:type owl:Class ;
                             rdfs:label "Recording Segment"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#Region_of_Interest
+###  http://anonymous/ontologies/onto4drone#Region_of_Interest
 onto4drone:Region_of_Interest rdf:type owl:Class ;
                               rdfs:subClassOf onto4drone:EntityOfInterest ;
                               rdfs:comment "The specific region that the recording activity aims to record."@en ;
                               rdfs:label "Region of Interest"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#Swarm
+###  http://anonymous/ontologies/onto4drone#Swarm
 onto4drone:Swarm rdf:type owl:Class ;
                  rdfs:subClassOf DUL:Abstract ;
                  rdfs:comment "A group of flying entities which aggregate together and move en masse in the same direction, while they may have the same or close departure and starting point. Perhaps the flying entities have a common or similar mission."@en ;
                  rdfs:label "Swarm"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#SwarmOfDrones
+###  http://anonymous/ontologies/onto4drone#SwarmOfDrones
 onto4drone:SwarmOfDrones rdf:type owl:Class ;
                          rdfs:subClassOf onto4drone:Swarm ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty <http://i-lab.aegean.gr/kotis/ontologies/onto4drone/hasPartDrone> ;
+                                           owl:onProperty <http://anonymous/ontologies/onto4drone/hasPartDrone> ;
                                            owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
                                            owl:onClass onto4drone:Drone
                                          ] ;
@@ -628,7 +624,7 @@ onto4drone:SwarmOfDrones rdf:type owl:Class ;
                          rdfs:label "Swarm of drones"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#UAVDrone
+###  http://anonymous/ontologies/onto4drone#UAVDrone
 onto4drone:UAVDrone rdf:type owl:Class ;
                     rdfs:subClassOf onto4drone:Drone ,
                                     onto4drone:FlyingObject ,
@@ -645,7 +641,7 @@ onto4drone:UAVDrone rdf:type owl:Class ;
                     rdfs:label "UAV drone"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#UMVDrone
+###  http://anonymous/ontologies/onto4drone#UMVDrone
 onto4drone:UMVDrone rdf:type owl:Class ;
                     rdfs:subClassOf onto4drone:Drone ,
                                     onto4drone:MarineObject ;
@@ -653,14 +649,14 @@ onto4drone:UMVDrone rdf:type owl:Class ;
                     rdfs:label "UMV drone" .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#Video
+###  http://anonymous/ontologies/onto4drone#Video
 onto4drone:Video rdf:type owl:Class ;
                  rdfs:subClassOf onto4drone:Record ;
                  rdfs:comment "A record of moving visual images captured by a video camera."@en ;
                  rdfs:label "Video"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#VideoRecordingEvent
+###  http://anonymous/ontologies/onto4drone#VideoRecordingEvent
 onto4drone:VideoRecordingEvent rdf:type owl:Class ;
                                rdfs:subClassOf onto4drone:RecordingEvent ,
                                                [ rdf:type owl:Restriction ;
@@ -682,15 +678,15 @@ onto4drone:VideoRecordingEvent rdf:type owl:Class ;
                                rdfs:label "Video Recording Event"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone/MilitaryEvent
-<http://i-lab.aegean.gr/kotis/ontologies/onto4drone/MilitaryEvent> rdf:type owl:Class ;
+###  http://anonymous/ontologies/onto4drone/MilitaryEvent
+<http://anonymous/ontologies/onto4drone/MilitaryEvent> rdf:type owl:Class ;
                                                                    rdfs:subClassOf datAcron:Event ;
                                                                    rdfs:label "Military Event"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone/SearchAndRescue
-<http://i-lab.aegean.gr/kotis/ontologies/onto4drone/SearchAndRescue> rdf:type owl:Class ;
-                                                                     rdfs:subClassOf <http://i-lab.aegean.gr/kotis/ontologies/onto4drone/MilitaryEvent> ;
+###  http://anonymous/ontologies/onto4drone/SearchAndRescue
+<http://anonymous/ontologies/onto4drone/SearchAndRescue> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://anonymous/ontologies/onto4drone/MilitaryEvent> ;
                                                                      rdfs:label "Search and Rescue"@en .
 
 
@@ -790,27 +786,27 @@ DUL:PhysicalObject rdf:type owl:Class .
 #    Individuals
 #################################################################
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#c_001
+###  http://anonymous/ontologies/onto4drone#c_001
 onto4drone:c_001 rdf:type owl:NamedIndividual ,
                           onto4drone:DronePhotographicCamera ;
                  rdfs:label "camera 001"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#f_001-m_001
+###  http://anonymous/ontologies/onto4drone#f_001-m_001
 onto4drone:f_001-m_001 rdf:type owl:NamedIndividual ,
                                 <http://www.opengis.net/ont/sf#Flight> ;
                        rdfs:label "flight 001 of mission 001"@en ;
                        sosa:hasResult onto4drone:p_001 .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#f_002-m_001
+###  http://anonymous/ontologies/onto4drone#f_002-m_001
 onto4drone:f_002-m_001 rdf:type owl:NamedIndividual ,
                                 <http://www.opengis.net/ont/sf#Flight> ;
                        rdfs:label "flight 002 of mission 001"@en ;
                        sosa:hasResult onto4drone:p_cl_001 .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#inspire_001
+###  http://anonymous/ontologies/onto4drone#inspire_001
 onto4drone:inspire_001 rdf:type owl:NamedIndividual ,
                                 onto4drone:UAVDrone ;
                        onto4drone:carriesEquipment onto4drone:c_001 ;
@@ -819,13 +815,13 @@ onto4drone:inspire_001 rdf:type owl:NamedIndividual ,
                        rdfs:label "inspire 001 (UAV)"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#lsc_001
+###  http://anonymous/ontologies/onto4drone#lsc_001
 onto4drone:lsc_001 rdf:type owl:NamedIndividual ,
                             onto4drone:DroneLaserScanner ;
                    rdfs:label "laser scanner 001"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#m_001
+###  http://anonymous/ontologies/onto4drone#m_001
 onto4drone:m_001 rdf:type owl:NamedIndividual ,
                           onto4drone:Mission ;
                  onto4drone:includesFlight onto4drone:f_001-m_001 ,
@@ -833,19 +829,19 @@ onto4drone:m_001 rdf:type owl:NamedIndividual ,
                  rdfs:label "mission 001"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#p_001
+###  http://anonymous/ontologies/onto4drone#p_001
 onto4drone:p_001 rdf:type owl:NamedIndividual ,
                           onto4drone:Photograph ;
                  rdfs:label "photograph 001"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#p_cl_001
+###  http://anonymous/ontologies/onto4drone#p_cl_001
 onto4drone:p_cl_001 rdf:type owl:NamedIndividual ,
                              onto4drone:PointCloud ;
                     rdfs:label "point cloud 001"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#petrifiedTrunk
+###  http://anonymous/ontologies/onto4drone#petrifiedTrunk
 onto4drone:petrifiedTrunk rdf:type owl:NamedIndividual ,
                                    onto4drone:ObjectOfInterest ;
                           onto4drone:isRecordedIn onto4drone:p_001 ,
@@ -853,7 +849,7 @@ onto4drone:petrifiedTrunk rdf:type owl:NamedIndividual ,
                           rdfs:label "petrified trunk"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#phantom_001
+###  http://anonymous/ontologies/onto4drone#phantom_001
 onto4drone:phantom_001 rdf:type owl:NamedIndividual ,
                                 onto4drone:UAVDrone ;
                        onto4drone:carriesEquipment onto4drone:lsc_001 ;
@@ -862,7 +858,7 @@ onto4drone:phantom_001 rdf:type owl:NamedIndividual ,
                        rdfs:label "Phantom 001 (UAV)"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#re_001
+###  http://anonymous/ontologies/onto4drone#re_001
 onto4drone:re_001 rdf:type owl:NamedIndividual ,
                            onto4drone:PhotoShootingEvent ;
                   onto4drone:hasDroneParticipant onto4drone:inspire_001 ;
@@ -872,7 +868,7 @@ onto4drone:re_001 rdf:type owl:NamedIndividual ,
                   rdfs:label "recording event 001"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#re_ls_002
+###  http://anonymous/ontologies/onto4drone#re_ls_002
 onto4drone:re_ls_002 rdf:type owl:NamedIndividual ,
                               onto4drone:LaserScanningEvent ;
                      onto4drone:hasDroneParticipant onto4drone:phantom_001 ;
@@ -882,21 +878,21 @@ onto4drone:re_ls_002 rdf:type owl:NamedIndividual ,
                      rdfs:label "laser scanning event 001"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#rp_001-t_001-inspire_001
+###  http://anonymous/ontologies/onto4drone#rp_001-t_001-inspire_001
 onto4drone:rp_001-t_001-inspire_001 rdf:type owl:NamedIndividual ,
                                              onto4drone:RecordingPosition ;
                                     datAcron:hasWeatherCondition onto4drone:wc_001-rp_001-t_001-inspire_001 ;
                                     rdfs:label "position 001"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#rp_002-t_001-phantom_001
+###  http://anonymous/ontologies/onto4drone#rp_002-t_001-phantom_001
 onto4drone:rp_002-t_001-phantom_001 rdf:type owl:NamedIndividual ,
                                              onto4drone:RecordingPosition ;
                                     datAcron:hasWeatherCondition onto4drone:wc_002-rp_001-t_001-phantom_001 ;
                                     rdfs:label "position 002"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#sd_001
+###  http://anonymous/ontologies/onto4drone#sd_001
 onto4drone:sd_001 rdf:type owl:NamedIndividual ,
                            onto4drone:SwarmOfDrones ;
                   onto4drone:hasPartDrone onto4drone:inspire_001 ,
@@ -904,7 +900,7 @@ onto4drone:sd_001 rdf:type owl:NamedIndividual ,
                   rdfs:label "swarm of drones 001"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#t_001-inspire_001
+###  http://anonymous/ontologies/onto4drone#t_001-inspire_001
 onto4drone:t_001-inspire_001 rdf:type owl:NamedIndividual ,
                                       datAcron:Trajectory ;
                              onto4drone:encloses onto4drone:ts_001-t_001-inspire_001 ;
@@ -912,34 +908,34 @@ onto4drone:t_001-inspire_001 rdf:type owl:NamedIndividual ,
                              rdfs:label "trajectory 001 of inspire 001 (UAV)"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#t_001-phantom_001
+###  http://anonymous/ontologies/onto4drone#t_001-phantom_001
 onto4drone:t_001-phantom_001 rdf:type owl:NamedIndividual ,
                                       datAcron:Trajectory ;
                              rdfs:label "trajectory 001 of phantom 001 (UAV)"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#ts_001-t_001-inspire_001
+###  http://anonymous/ontologies/onto4drone#ts_001-t_001-inspire_001
 onto4drone:ts_001-t_001-inspire_001 rdf:type owl:NamedIndividual ,
                                              onto4drone:RecordingSegment ;
                                     datAcron:comprises onto4drone:rp_001-t_001-inspire_001 ;
                                     rdfs:label "trajectory segment 001 of trajectory 001 of inspire 001 (UAV)"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#ts_001-t_001-phantom_001
+###  http://anonymous/ontologies/onto4drone#ts_001-t_001-phantom_001
 onto4drone:ts_001-t_001-phantom_001 rdf:type owl:NamedIndividual ,
                                              onto4drone:RecordingSegment ;
                                     datAcron:comprises onto4drone:rp_002-t_001-phantom_001 ;
                                     rdfs:label "trajectory segment 001 of trajectory 001 of phantom 001 (UAV)"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#wc_001-rp_001-t_001-inspire_001
+###  http://anonymous/ontologies/onto4drone#wc_001-rp_001-t_001-inspire_001
 onto4drone:wc_001-rp_001-t_001-inspire_001 rdf:type owl:NamedIndividual ,
                                                     datAcron:WeatherCondition ;
                                            datAcron:reportedMaxTemperature "25"^^xsd:int ;
                                            rdfs:label "weather condition 001 of position 001"@en .
 
 
-###  http://i-lab.aegean.gr/kotis/ontologies/onto4drone#wc_002-rp_001-t_001-phantom_001
+###  http://anonymous/ontologies/onto4drone#wc_002-rp_001-t_001-phantom_001
 onto4drone:wc_002-rp_001-t_001-phantom_001 rdf:type owl:NamedIndividual ,
                                                     datAcron:WeatherCondition ;
                                            datAcron:reportedMaxTemperature "24"^^xsd:int ;

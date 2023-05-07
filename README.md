@@ -2,13 +2,13 @@
 
 The aim of the ontology is to represent knowledge related to drones' semantic trajectories (flights, missions, recordings). Reuses datAcron ontology (http://ai-group.ds.unipi.gr/datacron_ontology/).
 
-Ontology IRI: http://i-lab.aegean.gr/kotis/Ontologies/Onto4drone
+Ontology IRI: http://anonymous/Ontologies/Onto4drone
 
 Ontology proposed prefix: dront
 
-OWL file: https://i-lab.aegean.gr/kotis/Ontologies/Onto4drone/Onto4drone.owl 
+OWL file: https://anonymous/Ontologies/Onto4drone/Onto4drone.owl 
 
-Latest OWL file: https://i-lab.aegean.gr/kotis/Ontologies/Onto4drone/Onto4drone_v1.0.2.owl
+Latest OWL file: https://anonymous/Ontologies/Onto4drone/Onto4drone_v1.0.2.owl
 
 ---
 ![example KG](images/exapmle-graph.png)
@@ -46,7 +46,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX dront: <http://i-lab.aegean.gr/kotis/ontologies/onto4drone#>
+PREFIX dront: <http://anonymous/ontologies/onto4drone#>
 PREFIX datacron: <http://www.datacron-project.eu/datAcron#>
 PREFIX opengis: <http://www.opengis.net/ont/sf#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
@@ -71,7 +71,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX dront: <http://i-lab.aegean.gr/kotis/ontologies/onto4drone#>
+PREFIX dront: <http://anonymous/ontologies/onto4drone#>
 PREFIX datacron: <http://www.datacron-project.eu/datAcron#>
 PREFIX opengis: <http://www.opengis.net/ont/sf#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
